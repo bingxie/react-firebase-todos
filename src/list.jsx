@@ -8,7 +8,7 @@ module.exports = React.createClass({
     </div>
   },
   renderList: function(){
-    if(this.props.items == null){
+    if(!this.props.items){
       return <h4>
         Add a todo to get started.
       </h4>
