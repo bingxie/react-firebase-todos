@@ -29,7 +29,9 @@ var notify = function(error) {
     message += '\nOn Line: ' + error.lineNumber;
   }
 
-  notifier.notify({title: title, message: message});
+  notifier.notify({title: title, message: message}, function(error, response) {
+    console.log(error);
+  });
 };
 
 var bundler = watchify(browserify({
